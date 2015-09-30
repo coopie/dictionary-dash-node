@@ -1,7 +1,7 @@
 var zipwith = require('zipwith').zipwith;
 
 function hammingDistance(str1, str2) {
-    return zipwith(equal , str1, str2).reduce(sumFalse, 0);
+    return zipwith(equal, str1, str2).reduce(sumFalse, 0);
 
     function equal(ch1, ch2) {
         return ch1 === ch2;
