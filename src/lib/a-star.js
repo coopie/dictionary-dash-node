@@ -10,7 +10,6 @@ function shortestDistance(args) {
     return aStar(end, [node(start, 0)]);
 
     function aStar(target, queue) {
-        console.log('queue: ', queue);
         if (queue.length === 0) {
             return Infinity;
         }
