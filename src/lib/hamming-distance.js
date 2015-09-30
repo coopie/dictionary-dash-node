@@ -7,7 +7,6 @@ function hammingDistance(str1, str2) {
         return ch1 === ch2;
     }
 
-    // booleans cast to integers when added to numbers
     function sumFalse(previous, current) {
         var val = current ? 0 : 1;
         return previous + val;

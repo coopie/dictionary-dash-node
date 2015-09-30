@@ -1,6 +1,6 @@
 var hammingDistance = require('./lib/hamming-distance');
 
-//builds the function for exanding the graph, given a node of the graph
+// Builds the function for exanding the graph, given a node of the graph
 function expandFunction(args) {
     var dictionary = args.dictionary;
     var distance = args.distance; // The hamming-distance jump size we are doing (usually 1)

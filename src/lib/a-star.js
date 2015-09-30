@@ -1,6 +1,3 @@
-
-// TODO: explain the arguments
-// args:  start, end, expand, heuristic
 function shortestDistance(args) {
     var start = args.start;
     var end = args.end;
