@@ -4,8 +4,8 @@
   "description": "Dictionary dash problem",
   "main": "src/main.js",
   "scripts": {
-    "test": "mocha test",
-    "start": "node src/main.js"
+    "start": "node src/main.js",
+    "test": "istanbul cover node_modules/.bin/_mocha -- -- test/*"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/coopie/dictionary-dash-node#readme",
   "dependencies": {
     "bluebird": "^2.10.1",
-    "mocha": "^2.3.3"
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3",
+    "zipwith": "0.0.1"
   }
 }
