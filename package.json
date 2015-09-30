@@ -1,0 +1,28 @@
+{
+  "name": "dictionary-dash-node",
+  "version": "1.0.0",
+  "description": "Dictionary dash problem",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopie/dictionary-dash-node.git"
+  },
+  "keywords": [
+    "dictionary",
+    "dash"
+  ],
+  "author": "Sam Coope",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coopie/dictionary-dash-node/issues"
+  },
+  "homepage": "https://github.com/coopie/dictionary-dash-node#readme",
+  "dependencies": {
+    "bluebird": "^2.10.1",
+    "mocha": "^2.3.3"
+  }
+}
