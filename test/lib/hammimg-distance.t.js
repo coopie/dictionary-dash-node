@@ -2,7 +2,7 @@ var assert = require('assert');
 var path = require('path');
 var moduleName = path.basename(__filename).split('.')[0];
 
-var hammingDistance = require('../src/hamming-distance');
+var hammingDistance = require('../../src/lib/hamming-distance');
 
 describe(moduleName, function() {
     var shouldReturn = 'should return: ';

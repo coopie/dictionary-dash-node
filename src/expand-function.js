@@ -1,4 +1,4 @@
-var hammingDistance = require('./hamming-distance');
+var hammingDistance = require('./lib/hamming-distance');
 
 //builds the function for exanding the graph, given a node of the graph
 function expandFunction(args) {
