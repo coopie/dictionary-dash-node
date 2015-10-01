@@ -16,7 +16,7 @@ fs.readFileAsync(pathToDictionary)
 
     if (dictionary.indexOf(endWord) === -1) {
         console.err(endWord, ' does not exist in dictionary');
-        process.exit;
+        process.exit();
     }
 
     var expand = expandFunction({

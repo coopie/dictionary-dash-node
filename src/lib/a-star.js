@@ -4,9 +4,9 @@ function shortestDistance(args) {
     var expand = args.expand;
     var heuristic = args.heuristic;
 
-    return aStar(end, [node(start, 0)]);
+    return aStar(end, [node(start, 0)], {});
 
-    function aStar(target, queue) {
+    function aStar(target, queue, expandedNodes) {
         if (queue.length === 0) {
             return Infinity;
         }
@@ -15,8 +15,12 @@ function shortestDistance(args) {
         if (nodeToExpand.id === target) {
             return nodeToExpand.distanceFromStart;
         } else {
-            var nodesFromExpansion = makeNewNodes(expand(nodeToExpand.id), nodeToExpand);
-            return aStar(target, queue.concat(nodesFromExpansion).sort(nodeSort));
+            expandedNodes[nodeToExpand.id] = true;
+            var nodesToAddToQueue = expand(nodeToExpand.id).filter(function(node) {
+                return !expandedNodes[node.id];
+            });
+            var nodesFromExpansion = makeNewNodes(nodesToAddToQueue, nodeToExpand);
+            return aStar(target, queue.concat(nodesFromExpansion).sort(nodeSort), expandedNodes);
         }
     }
 

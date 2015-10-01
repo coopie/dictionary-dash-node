@@ -61,7 +61,7 @@ describe(moduleName, function() {
         });
     });
     describe('More than shortest possible path', function() {
-        it(shouldReturn + '2', function() {
+        it(shouldReturn + '5', function() {
             assert.equal(shortestDistance({
                 start: 'ham',
                 end: 'tog',
@@ -71,6 +71,19 @@ describe(moduleName, function() {
                 }),
                 heuristic: heuristicFunction('tog')
             }), 5);
+        });
+    });
+    describe('Could choose wrong', function() {
+        it(shouldReturn + '4', function() {
+            assert.equal(shortestDistance({
+                start: 'ham',
+                end: 'tog',
+                expand: expandFunction({
+                    dictionary: ['hal','has','him','hil','til','tal','tol','tog'],
+                    distance: 1
+                }),
+                heuristic: heuristicFunction('tog')
+            }), 4);
         });
     });
 });
